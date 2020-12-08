@@ -1,3 +1,6 @@
 ﻿Logs
 Library
 Temp
+*.csproj
+Prototype_2.sln
+obj/Debug
