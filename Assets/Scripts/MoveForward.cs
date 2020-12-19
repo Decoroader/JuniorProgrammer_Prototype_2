@@ -2,7 +2,7 @@
 
 public class MoveForward : MonoBehaviour
 {
-    public float speed = 15.0f;
+    public float speed = 5.0f;
 
 	void FixedUpdate()
 	{

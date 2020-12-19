@@ -4,7 +4,7 @@ public class SpawnManager : MonoBehaviour
 {
     public GameObject[] AnimalPrefabs;
     
-    private float maxAbsX = 20.0f;
+    private float maxAbsX = 19.0f;
     private float maxZ = 25.0f;
     private Vector3 newAnimalPosition;
     private float startDelay = 2.0f;
