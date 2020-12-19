@@ -6,8 +6,8 @@ public class PlayerContoller : MonoBehaviour
     public float horizontalInput;
     public float speed = 10.0f;
     private float range = 10.0f;
-    
-    public GameObject projectilePrefab;
+
+	public GameObject projectilePrefab;
 
     void Update()
     {
@@ -18,15 +18,18 @@ public class PlayerContoller : MonoBehaviour
             transform.position = new Vector3(Math.Sign(transform.position.x)*range, 
                 transform.position.y, transform.position.z);
 
-        //      if (transform.position.x < -range)
-        //      {
-        //          transform.position = new Vector3(-range, transform.position.y, transform.position.z);
-        //      }
-        //      if (transform.position.x > range)
-        //      {
-        //          transform.position = new Vector3(range, transform.position.y, transform.position.z);
-        //      }
-        //        horizontalInput = Input.GetAxis("Horizontal");
-        //        transform.Translate(Vector3.right * horizontalInput * Time.deltaTime * speed);
-    }
+		//      if (transform.position.x < -range)
+		//      {
+		//          transform.position = new Vector3(-range, transform.position.y, transform.position.z);
+		//      }
+		//      if (transform.position.x > range)
+		//      {
+		//          transform.position = new Vector3(range, transform.position.y, transform.position.z);
+		//      }
+		//        horizontalInput = Input.GetAxis("Horizontal");
+		//        transform.Translate(Vector3.right * horizontalInput * Time.deltaTime * speed);
+
+		if (Input.GetKeyDown(KeyCode.Space))
+			Instantiate(projectilePrefab, transform.position, transform.rotation);
+	}
 }
