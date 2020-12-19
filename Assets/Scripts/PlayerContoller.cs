@@ -30,6 +30,7 @@ public class PlayerContoller : MonoBehaviour
 		//        transform.Translate(Vector3.right * horizontalInput * Time.deltaTime * speed);
 
 		if (Input.GetKeyDown(KeyCode.Space))
-			Instantiate(projectilePrefab, transform.position, transform.rotation);
+			Instantiate(projectilePrefab, new Vector3(transform.position.x, 
+				transform.position.y + 1, transform.position.z), transform.rotation);
 	}
 }
