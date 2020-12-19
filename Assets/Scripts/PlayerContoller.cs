@@ -32,5 +32,7 @@ public class PlayerContoller : MonoBehaviour
 		if (Input.GetKeyDown(KeyCode.Space))
 			Instantiate(projectilePrefab, new Vector3(transform.position.x, 
 				transform.position.y + 1, transform.position.z), transform.rotation);
+		if(Input.GetKeyDown(KeyCode.S))
+			Application.Quit();
 	}
 }
