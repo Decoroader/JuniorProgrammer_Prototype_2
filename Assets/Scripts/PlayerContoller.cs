@@ -6,6 +6,9 @@ public class PlayerContoller : MonoBehaviour
     public float horizontalInput;
     public float speed = 10.0f;
     private float range = 10.0f;
+    
+    public GameObject projectilePrefab;
+
     void Update()
     {
         horizontalInput = Input.GetAxis("Horizontal");
