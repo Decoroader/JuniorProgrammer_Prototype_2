@@ -23,12 +23,12 @@ public class SpawnManagerX : MonoBehaviour
     void SpawnRandomBall ()
     {
         // Generate random ball index and random spawn position
-        //int ballIndex = Random.Range(0, ballPrefabs.Length);
+        int ballIndex = Random.Range(0, ballPrefabs.Length);
         Vector3 spawnPos = new Vector3(Random.Range(spawnLimitXLeft, spawnLimitXRight), spawnPosY, 0);
 
         // instantiate ball at random spawn location
-        //Instantiate(ballPrefabs[ballIndex], spawnPos, ballPrefabs[ballIndex].transform.rotation);
-        Instantiate(ballPrefabs[Random.Range(0, ballPrefabs.Length)], spawnPos, Quaternion.identity);
+        Instantiate(ballPrefabs[ballIndex], spawnPos, ballPrefabs[ballIndex].transform.rotation);
+        //Instantiate(ballPrefabs[Random.Range(0, ballPrefabs.Length)], spawnPos, Quaternion.identity);
     }
 
 }
